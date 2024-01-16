@@ -38,3 +38,12 @@ services:
       WORDPRESS_DB_PASSWORD: hetic
     volumes:
       - ./wordpress:/var/www/html
+  
+  web:
+    build: .
+      command: pythin app.by
+      ports:
+       - "90:80"
+      restart: always
+      #volumes:
+      #  - ./static/pwa/icon:/app/static/pwa/icon
